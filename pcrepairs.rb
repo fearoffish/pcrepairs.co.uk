@@ -37,7 +37,7 @@ post '/' do
   Pony.mail :to => 'jamie@fearoffish.com',
             :from => from,
             :subject => '[PC Repairs] Contact Form',
-            :message => params[:message]
+            :body => params[:message]
   
   @flash = "Thanks for getting in touch, we'll get back to you soon."
   erb :home

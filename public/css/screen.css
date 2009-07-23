@@ -125,9 +125,8 @@
 		height:108px;
 		position:relative;
 		}
-	img#logo {
+	#header img {
 		padding: 10px 0 0 30px;
-		height: 84px;
 	}
 	.col{
 		float:left;
@@ -238,8 +237,7 @@
 		line-height:76px;	
 		color:#fff;
 		padding:0 20px 0 10px;
-		}
-	#header
+		}		
 
 /* // header */
 

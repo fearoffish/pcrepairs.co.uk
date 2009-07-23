@@ -1,0 +1,46 @@
+	<p id="slogan">Who you gonna call?</p>
+
+	<div id="content">
+
+		<div id="main">
+		
+			<h2>Contact</h2>
+		
+			<p>Need a quote or just simply have a question? You can get in touch using either the form below, the telephone, or even by post!</p>
+
+      <p class="contact">Contact us by telephone on <span class="telephone">+44 (0)1756 796622</span></p>
+      
+      <p class="contact">Come visit us at the following address: Thorpe House, Embsay Mill, Embsay, North Yorkshire, BD23 6QF.</p>
+
+      <p>or fill in your details below and press send:</p>
+			<form id="contactForm" action="/" method="post">
+							
+				<fieldset><legend>Contact form</legend>
+					<p>
+						<label for="name">Name <em>*</em></label>
+						<input type="text" name="name" id="name" size="30" class="required" />
+					</p>
+					<p>
+						<label for="email">Email <em>*</em></label>
+						<input type="text" name="email" id="email" size="30" class="required email" />
+					</p>														
+					<p>
+						<label for="message">Message <em>*</em></label>
+						<textarea name="message" id="message" rows="10" cols="30" class="required"></textarea>
+					</p>								
+					<p class="submit">
+						<button type="submit">Send</button>
+					</p>					
+				</fieldset>
+								
+			</form>	
+		
+		</div>
+		
+	<%= erb(:updates, :layout => false) %>
+	
+	<script>
+    $(document).ready(function(){
+      $("#contactForm").validate();
+    });
+  </script>

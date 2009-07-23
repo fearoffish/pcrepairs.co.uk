@@ -33,11 +33,11 @@ post '/' do
     end
   end
   from = "#{params[:name]} <#{params[:email]}>"
-
-  Pony.mail :to => 'jamie@fearoffish.com',
+  body = "Someone sent you this message form your website: \n" + params[:message]
+  Pony.mail :to => 'vernon@pcrepairs.co.uk, jamie@fearoffish.com',
             :from => from,
             :subject => '[PC Repairs] Contact Form',
-            :body => params[:message]
+            :body => body
   
   @flash = "Thanks for getting in touch, we'll get back to you soon."
   erb :home

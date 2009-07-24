@@ -3,25 +3,25 @@ require 'sinatra'
 require 'pony'
 
 get "/" do
-  @title = 'Skipton'
+  @title = 'in Skipton, Embsay, Crosshills, Silsden, Steeton and more. All over Yorkshire.'
   @selected = 'about'
   erb :home
 end
 
 get '/home_services' do
-  @title = 'Home Services'
+  @title = 'Home PC services in the Skipton Area'
   @selected = 'home'
   erb :home_services
 end
 
 get '/business_services' do
-  @title = 'Business Services'
+  @title = 'Business IT services in the Skipton Area'
   @selected = 'business'
   erb :business_services
 end
 
 get "/contact_us" do
-  @title = 'Contact Us'
+  @title = 'Get in touch, by phone, address or email'
   @selected = 'contact'
   erb :contact
 end
@@ -39,6 +39,6 @@ post '/' do
             :subject => '[PC Repairs] Contact Form',
             :body => body
   
-  @flash = "Thanks for getting in touch, we'll get back to you soon."
+  @flash = "Thanks for getting in touch, we'll get back to you soon"
   erb :home
 end

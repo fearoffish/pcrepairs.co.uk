@@ -1,7 +1,4 @@
-Sinatra::Application.default_options.merge!(
-  :run => false,
-  :env => ENV['RACK_ENV']
-)
-
+require 'rubygems'
 require 'pcrepairs'
-run Sinatra.application
+
+run Sinatra::Application

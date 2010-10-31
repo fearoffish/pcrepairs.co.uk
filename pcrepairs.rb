@@ -33,10 +33,19 @@ post '/' do
   end
   from = "#{params[:name]} <#{params[:email]}>"
   body = "Someone sent you this message from your website: \n\n" + params[:message]
-  Pony.mail :to => 'vernon@pcrepairs.co.uk, jamie@fearoffish.com',
+  Pony.mail :to => 'jamie@fearoffish.com',
             :from => from,
             :subject => '[PC Repairs] Contact Form',
-            :body => body
+            :body => body,
+            :via => :smtp,
+            :via_options => {
+              :address        => 'smtp.sendgrid.net',
+              :port           => '587',
+              :user_name      => ENV['SENDGRID_USERNAME'],
+              :password       => ENV['SENDGRID_PASSWORD'],
+              :authentication => :plain,
+              :domain         => ENV['SENDGRID_DOMAIN']
+            }
   
   @flash = "Thanks for getting in touch, we'll get back to you soon"
   erb :home

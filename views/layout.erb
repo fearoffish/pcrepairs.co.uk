@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>PC Repairs - <%= @title %></title>	
-	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />    
+	<title>PC Repairs - <%= @title %></title>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	<meta name="keywords" content=""></meta>
 	<meta name="description" content=""></meta>
 	<meta http-equiv="imagetoolbar" content="no" />
@@ -11,39 +11,40 @@
 	<script type="text/javascript" src="http://dev.jquery.com/view/trunk/plugins/validate/jquery.validate.js"></script>
 </head>
 <body>
+  <script language="javascript" type="text/javascript" src="http://quickribbon.com/ribbon/2011/02/02cbcbefbb8135d704609d02e5d1d143.js"></script><noscript><a href="http://quickribbon.com/">Quickribbon</a></noscript>
 
-<div id="container">
+  <div id="container">
 
-	<div id="header">
-		
-		<h1><a href="/" title="click here to return to the homepage"><img src="images/pcrepairs_logo.jpg" alt="PC Repairs"></a></h1>
-		
-		<ul id="nav">
-			<li<%= ' class="selected"' if @selected == 'about' %>><a href="/"><span>About Us</span></a></li>
-			<li<%= ' class="selected"' if @selected == 'home' %>><a href="/home_services"><span>Home</span></a></li>
-			<li<%= ' class="selected"' if @selected == 'business' %>><a href="/business_services"><span>Business</span></a></li>
-			<li<%= ' class="selected"' if @selected == 'contact' %>><a href="/contact_us"><span>Contact</span></a></li>
-		</ul>
-		
-	</div>
+  	<div id="header">
 
-	<%= yield %>
-	
-	<div id="footer">
-	
-		<p>Copyright &copy; 2009 PC Repairs - All Rights Reserved. Thorpe House, Embsay Mill, Embsay, Skipton, North Yorkshire, BD23 6QF.</p>
-	
-	</div>
+  		<h1><a href="/" title="click here to return to the homepage"><img src="images/pcrepairs_logo.jpg" alt="PC Repairs"></a></h1>
 
-</div>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-9906051-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+  		<ul id="nav">
+  			<li<%= ' class="selected"' if @selected == 'about' %>><a href="/"><span>About Us</span></a></li>
+  			<li<%= ' class="selected"' if @selected == 'home' %>><a href="/home_services"><span>Home</span></a></li>
+  			<li<%= ' class="selected"' if @selected == 'business' %>><a href="/business_services"><span>Business</span></a></li>
+  			<li<%= ' class="selected"' if @selected == 'contact' %>><a href="/contact_us"><span>Contact</span></a></li>
+  		</ul>
+
+  	</div>
+
+  	<%= yield %>
+
+  	<div id="footer">
+
+  		<p>Copyright &copy; 2009 PC Repairs - All Rights Reserved. Thorpe House, Embsay Mill, Embsay, Skipton, North Yorkshire, BD23 6QF.</p>
+
+  	</div>
+
+  </div>
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-9906051-1");
+  pageTracker._trackPageview();
+  } catch(err) {}</script>
 </body>
 </html>

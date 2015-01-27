@@ -1,3 +1,4 @@
+# Updated to heroku cedar
 require 'sinatra'
 require 'pony'
 
